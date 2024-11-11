@@ -42,6 +42,8 @@
 - refactor the code by defining constants in a separate file
 - create component folder for components and refactor the imports
 
+## user unauthenticated 
 - If user not given access to other routes without login
 - If token not present, redirect the user to login page
 
+## Logout
