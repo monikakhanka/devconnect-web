@@ -58,4 +58,4 @@
 
 - show toast message on saving profile
 
-## See all my connecctions
+## See all my connections
