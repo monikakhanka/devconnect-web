@@ -62,3 +62,5 @@
 
 - New page - see all my connections
 - New page - see all my connection requests
+
+## Accept or reject a connection request
