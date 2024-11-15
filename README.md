@@ -59,3 +59,6 @@
 - show toast message on saving profile
 
 ## See all my connections
+
+- New page - see all my connections
+- New page - see all my connection requests
