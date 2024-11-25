@@ -1,66 +1,91 @@
-# DevConnect frontend
+# DEVConnect
 
-## Vite project and tilwind configure
+DEVConnect is a web app designed to help developers connect based on their skills, interests, and goals. It lets developers show interest or ignore the profiles of developers to find collaborators for projects, mentors, or even co-founders.
 
-- created a Vite + React application
-- npm install and git initialise
-- remove unnecessary code and files
-- configure tailwindcss for vite
-- npm run dev
+## Features:
 
-## Install daisyui component plugin
+- Sign up Page - for signing up or registering a new user
+- Log in Page - for logging in the user.
+- Profile Page - To update the profile by entering photoUrl, skills, age etc.
+- Feed Page - Ignore/Accept profiles and match with other developers, to send connection requests.
+- Connections - To display the profiles of all connections.
+- Requests - To display the profiles of all requests received.
+- Logout Page - To log out user.
 
-- install daisyui
-- add Navbar component to app.js
-- separate NavBar.jsx for bavbar component
+## Installation:
 
-## Router installation and configure
+Steps to set up the project locally:
 
-- npm install react-router-dom
-- create BrowserRouter, Routes, route, route children
-- create routes and children routes
-- Use <Outlet/> to render children route in body component. All the components will be rendered below NavBar and we will not have to write navbar on each page separately
-- Likewise a footer component below the outlet will be rendered on each page
-- create footer component
+Frontend:
 
-## login Page, CORS configure
+1. Clone the repository
+   git clone https://github.com/monikakhanka/devconnect-web.git
+2. Navigate to the project directory
+   cd devconnecct-web
+3. Install dependencies
+   npm install
+4. Start the development server
+   npm start dev
 
-- create login page
-- install axios
-- CORS - install cors in backend => add middleware with configurations: origin:"http://localhost:3000" and credentials: true
-- while making api call from frontend using axios pass => {withCredentials: true} to get access to th e cookies
+Backend:
 
-## Install redux
+1. Clone the repository
+   git clone https://github.com/monikakhanka/devconnect.git
+2. Navigate to the project directory
+   cd devconnect
+3. Install dependencies
+   npm install
+4. create .env file in the root directory of your project and add the following environment variables:
+   replace the <enclosed> fields with your credentials
+   PORT=3000
+   DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.rshmv.mongodb.net/<database_name>"
+   ORIGIN_URL="http://localhost:5173"
+   JWT_SECRET="<JWT_SECRET>
 
-- install redux
-  #npm install @reduxjs/toolkit
-  #npm install react-redux
-- create utils folder inside src and in it create {appStore.js} to configure redux store
-- provide the store to the app by wrapping the App code inside <Provider store={appStore}>
-- create slices in appStore - user
-- add reducer to the store
-- refactor the code by defining constants in a separate file
-- create component folder for components and refactor the imports
+## Technologies used:
 
-## user unauthenticated
+List of tools, libraries and frameworks used in the project
 
-- If user not given access to other routes without login
-- If token not present, redirect the user to login page
+- Frontend: React, daisyui
+- Backend: Node.js
+- Database: Mongodb cluster
+- Build tool: Vite
+- Deployment: Render
 
-## Logout feature
+## How it works
 
-## feed feature
+Steps to use the app:
 
-- get the feed and add it in store using feedSlice
-- build user card to populate information
+1. Sign up:
 
-## Edit profile feature
+- Create a profile by entering First Name, Last Name, Email Id and Password.
+- On successful sign up, profile page opens, where user can update the profile informations.
 
-- show toast message on saving profile
+2. Log in:
 
-## See all my connections
+- If the user already exist, then login using Email Id and Password.
+- On successful log user is directed to feed page.
 
-- New page - see all my connections
-- New page - see all my connection requests
+3. Feed:
 
-## Accept or reject a connection request
+- Through the feed page, user can send connection request to other developers.
+- User can show interest or ignore the profiles of fellow developers.
+- On submiting any of the two options Ignore/Interested, profile of next developer in the list, who is not a connection yet shows up.
+
+4. Connections:
+
+- A list of all the connections with few details
+
+5. Requests:
+
+- List of all the connection requests from other developers to the logged in user
+- Logged In user can accept or reject the requests
+- Once accepted, the accepted requests are listed in connection page
+
+6. Logout:
+
+- For logging out the user
+
+## Roadmap
+
+- Chat feature to communicate with fellow developers
