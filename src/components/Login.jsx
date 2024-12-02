@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const [firstName, setFirstName] = useState("");
@@ -116,11 +117,22 @@ const Login = () => {
           </div>
           <div className="card-actions justify-center">
             <button
-              className="btn btn-primary m-2"
+              className="btn btn-primary m-2 w-full text-base"
               onClick={isLoginForm ? handleLogin : handleSignup}>
               {isLoginForm ? "Login" : "Sign up"}
             </button>
           </div>
+          {isLoginForm && (
+            <div className="text-center text-lg">
+              <p className="mb-4">OR</p>
+              <div>
+                <button className="btn btn-primary text-base text-black w-full inline-block h-12">
+                  <FaGoogle className="inline-block mr-4 text-base" /> Sign in
+                  with google
+                </button>
+              </div>
+            </div>
+          )}
           <p
             className="flex justify-center cursor-pointer"
             onClick={() => setIsLoginForm((value) => !value)}>
